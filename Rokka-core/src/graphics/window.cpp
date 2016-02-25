@@ -2,6 +2,8 @@
 
 namespace rokka { namespace graphics {
 
+  void windowResize(GLFWwindow *window, int width, int height);
+
   Window::Window(const char *title, int width, int height) {
     m_Title = title;
     m_Width = width;
@@ -18,16 +20,20 @@ namespace rokka { namespace graphics {
       std::cout << "Failed to initialize GLFW!" << std::endl;
       return false;
     }
-
     m_Window = glfwCreateWindow(m_Width, m_Height, m_Title, NULL, NULL);
-
     if(!m_Window) {
       glfwTerminate();
       std::cout << "Failed to create GFLW window!" << std::endl;
       return false;
     }
     glfwMakeContextCurrent(m_Window);
+    glfwSetWindowSizeCallback(m_Window, windowResize);
     return true;
+  }
+
+  void Window::Update() {
+    glfwPollEvents();
+    glfwSwapBuffers(m_Window);
   }
 
   void Window::clear() const {
@@ -38,12 +44,10 @@ namespace rokka { namespace graphics {
     return glfwWindowShouldClose(m_Window) == 1;
   }
 
-  void Window::Update() {
-    glfwPollEvents();
-    glfwGetFramebufferSize(m_Window, &m_Width, &m_Height);
-    glViewport(0, 0, m_Width, m_Height);
-    glfwSwapBuffers(m_Window);
-
+  void windowResize(GLFWwindow *window, int width, int height) {
+    glViewport(0, 0, width, height);
   }
+
+
 
 } }
