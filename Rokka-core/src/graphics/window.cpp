@@ -30,13 +30,20 @@ namespace rokka { namespace graphics {
     return true;
   }
 
-  bool Window::closed() const {
-    return glfwWindowShouldClose(m_Window);
+  void Window::clear() const {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   }
 
-  void Window::Update() const {
-    glfwSwapBuffers(m_Window);
+  bool Window::closed() const {
+    return glfwWindowShouldClose(m_Window) == 1;
+  }
+
+  void Window::Update() {
     glfwPollEvents();
+    glfwGetFramebufferSize(m_Window, &m_Width, &m_Height);
+    glViewport(0, 0, m_Width, m_Height);
+    glfwSwapBuffers(m_Window);
+
   }
 
 } }

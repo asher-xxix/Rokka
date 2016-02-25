@@ -15,12 +15,16 @@ namespace rokka { namespace graphics {
 
       bool Init();
 
+
     public:
       Window(const char *title, int width, int height);
       ~Window();
       bool closed() const;
-      void Update() const;
+      void Update();
+      void clear() const;
 
+      inline int getWidth() const { return m_Width; }
+      inline int getHeight() const { return m_Height; }
 
     };
 
