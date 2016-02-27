@@ -22,9 +22,9 @@ namespace rokka { namespace graphics {
       friend void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
       friend void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
 
-      static bool m_Keys[MAX_KEYS];
-      static bool m_MouseButtons[MAX_BUTTONS];
-      static double m_MouseX, m_MouseY;
+      bool m_Keys[MAX_KEYS];
+      bool m_MouseButtons[MAX_BUTTONS];
+      double m_MouseX, m_MouseY;
 
 
 
@@ -38,9 +38,9 @@ namespace rokka { namespace graphics {
       inline int getWidth() const { return m_Width; }
       inline int getHeight() const { return m_Height; }
 
-      static bool isKeyPressed(unsigned int keycode);
-      static bool isMouseButtonPressed(unsigned int button);
-      static void getMousePosition(double &x, double &y);
+      bool isKeyPressed(unsigned int keycode) const;
+      bool isMouseButtonPressed(unsigned int button) const;
+      void getMousePosition(double &x, double &y) const;
     };
 
 } }
