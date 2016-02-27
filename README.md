@@ -19,3 +19,10 @@ But to execute a window now, window.cpp needs to be compiled
 first so the linker can find the definition of the functions.
 
 `g++ graphics/window.cpp main.cpp -lGL -lGLU -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lm -ldl -lXinerama -lXcursor -o exe-name`
+
+
+
+
+To install glew, just do `sudo make install` in the libs/glew-1.13.0 directory.
+
+You should also compile like this now `g++ graphics/window.cpp main.cpp -lGL -lGLU -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lm -ldl -lXinerama -lXcursor -o exe-name -lGLEW`. Notice the `lGLEW` at the very end.
