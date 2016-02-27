@@ -22,6 +22,10 @@ int main() {
       std::cout << "PRESSED MOUSE!" << std::endl;
     }
 
+    double x, y;
+    window.getMousePosition(x, y);
+    std::cout << x << ", " << y << std::endl;
+
 #if 0
     glBegin(GL_TRIANGLES);
     glVertex2f(-0.5f, -0.5f);

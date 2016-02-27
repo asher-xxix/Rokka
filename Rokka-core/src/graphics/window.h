@@ -20,6 +20,7 @@ namespace rokka { namespace graphics {
       bool Init();
       friend void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
       friend void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+      friend void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
 
       static bool m_Keys[MAX_KEYS];
       static bool m_MouseButtons[MAX_BUTTONS];
@@ -39,6 +40,7 @@ namespace rokka { namespace graphics {
 
       static bool isKeyPressed(unsigned int keycode);
       static bool isMouseButtonPressed(unsigned int button);
+      static void getMousePosition(double &x, double &y);
     };
 
 } }
