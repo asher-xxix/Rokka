@@ -18,7 +18,7 @@ namespace rokka { namespace graphics {
       bool m_Closed;
 
       bool Init();
-      friend static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+      friend void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
       static bool m_Keys[MAX_KEYS];
       static bool m_MouseButtons[MAX_BUTTONS];
