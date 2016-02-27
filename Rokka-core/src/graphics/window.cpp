@@ -3,6 +3,7 @@
 namespace rokka { namespace graphics {
 
   void window_resize(GLFWwindow *window, int width, int height);
+  void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
   bool Window::m_Keys[MAX_KEYS];
   bool Window::m_MouseButtons[MAX_BUTTONS];
@@ -42,6 +43,7 @@ namespace rokka { namespace graphics {
     glfwMakeContextCurrent(m_Window);
     glfwSetWindowUserPointer(m_Window, this);
     glfwSetWindowSizeCallback(m_Window, window_resize);
+    glfwSetKeyCallback(m_Window, key_callback);
 
     if(glewInit() != GLEW_OK) {
       std::cout << "Could not initialize GLEW!" << std::endl;
