@@ -18,6 +18,9 @@ int main() {
     if(window.isKeyPressed(GLFW_KEY_A)) {
       std::cout << "PRESSED!" << std::endl;
     }
+    if(window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT)) {
+      std::cout << "PRESSED MOUSE!" << std::endl;
+    }
 
 #if 0
     glBegin(GL_TRIANGLES);
