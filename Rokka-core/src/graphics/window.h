@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WINDOW_H
+#define WINDOW_H
 
 #include <iostream>
 #include <GL/glew.h>
@@ -44,3 +45,5 @@ namespace rokka { namespace graphics {
     };
 
 } }
+
+#endif
