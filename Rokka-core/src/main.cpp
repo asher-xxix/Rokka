@@ -1,5 +1,5 @@
 #include "./graphics/window.h"
-
+#include "./math/vec2.h"
 
 
 int main() {
