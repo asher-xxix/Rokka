@@ -41,19 +41,19 @@ namespace rokka { namespace math {
     return *this;
   }
 
-  Vec3& operator+(Vec3 left, const Vec3& right) {
+  Vec3 operator+(Vec3 left, const Vec3& right) {
     return left.add(right);
   }
 
-  Vec3& operator-(Vec3 left, const Vec3& right) {
+  Vec3 operator-(Vec3 left, const Vec3& right) {
     return left.subtract(right);
   }
 
-  Vec3& operator*(Vec3 left, const Vec3& right) {
+  Vec3 operator*(Vec3 left, const Vec3& right) {
     return left.multiply(right);
   }
 
-  Vec3& operator/(Vec3 left, const Vec3& right) {
+  Vec3 operator/(Vec3 left, const Vec3& right) {
     return left.divide(right);
   }
 

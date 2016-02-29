@@ -17,10 +17,10 @@ namespace rokka { namespace math {
     Vec4& multiply(const Vec4& other);
     Vec4& divide(const Vec4& other);
 
-    friend Vec4& operator+(Vec4 left, const Vec4& right);
-    friend Vec4& operator-(Vec4 left, const Vec4& right);
-    friend Vec4& operator*(Vec4 left, const Vec4& right);
-    friend Vec4& operator/(Vec4 left, const Vec4& right);
+    friend Vec4 operator+(Vec4 left, const Vec4& right);
+    friend Vec4 operator-(Vec4 left, const Vec4& right);
+    friend Vec4 operator*(Vec4 left, const Vec4& right);
+    friend Vec4 operator/(Vec4 left, const Vec4& right);
 
     bool operator==(const Vec4& other);
     bool operator!=(const Vec4& other);
