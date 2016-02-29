@@ -28,3 +28,6 @@ To install glew, just do `sudo make install` in the libs/glew-1.13.0 directory.
 You should also compile like this now (in the src directory like always) `g++ graphics/window.cpp main.cpp -lGL -lGLU -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lm -ldl -lXinerama -lXcursor -o ../bin/exe-name -lGLEW`.
 Notice the `lGLEW` at the very end. And we now place our executables in the bin/
 directory.
+
+
+A side note, Vec4 was made because it is useful for colors.
