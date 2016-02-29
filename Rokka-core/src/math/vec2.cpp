@@ -68,6 +68,14 @@ namespace rokka { namespace math {
     return divide(other);
   }
 
+  bool Vec2::operator==(const Vec2& other) {
+    return x == other.x && y == other.y;
+  }
+
+  bool Vec2::operator!=(const Vec2& other) {
+    return !(*this == other);
+  }
+
   std::ostream& operator<<(std::ostream& stream, const Vec2& vector) {
     stream << "Vec2: (" << vector.x << ", " << vector.y << ")";
     return stream;
