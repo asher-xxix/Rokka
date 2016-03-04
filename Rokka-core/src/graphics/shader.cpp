@@ -8,13 +8,20 @@ namespace rokka { namespace graphics {
     m_ShaderID = load();
   }
 
+  Shader::~Shader() {
+    glDeleteProgram(m_ShaderID);
+  }
+
   GLuint Shader::load() {
     GLuint program = glCreateProgram();
     GLuint vertex = glCreateShader(GL_VERTEX_SHADER);
     GLuint fragment = glCreateShader(GL_FRAGMENT_SHADER);
 
-    const char* vertSource = read_file(m_VertPath).c_str();
-    const char* fragSource = read_file(m_FragPath).c_str();
+    std::string vertSourceString = FileUtils::read_file(m_VertPath);
+    std::string fragSourceString = FileUtils::read_file(m_FragPath);
+
+    const char* vertSource = vertSourceString.c_str();
+    const char* fragSource = fragSourceString.c_str();
 
     glShaderSource(vertex, 1, &vertSource, NULL);
     glCompileShader(vertex);
@@ -62,7 +69,13 @@ namespace rokka { namespace graphics {
     return program;
   }
 
+  void Shader::enable() const {
+    glUseProgram(m_ShaderID);
+  }
 
+  void Shader::disable() const {
+    glUseProgram(0);
+  }
 
 
 }}
