@@ -1,6 +1,8 @@
 # Rokka
 
-Rokka is a hobby project to create a 3d game engine.
+### Rokka is a hobby project to create a 3d game engine.
+
+If anyone wants to work on this with me, please make a pull request.
 
 If you're on Linux like me, to install glfw, do this
 ```
