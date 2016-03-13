@@ -1,6 +1,6 @@
 #version 330 core
 
-layout(location = 0) in Vec4 color;
+layout(location = 0) out Vec4 color;
 
 uniform mat4 pr_matrix;
 uniform mat4 vw_matrix = mat4(1.0);

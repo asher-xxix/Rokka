@@ -10,11 +10,30 @@ int main() {
   Window window("Rokka", 800, 600);
   glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
+
+
+  GLfloat vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+    -0.5f,  0.5f, 0.0f,
+     0.5f,  0.5f, 0.0f,
+     0.5f,  0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.0f
+  };
+
+
+  GLuint vbo;
   GLuint vao;
   glGenVertexArrays(1, &vao);
   glBindVertexArray(vao);
+  glGenBuffers(1, &vbo);
+  glBindBuffer(GL_ARRAY_BUFFER, vbo);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+  glEnableVertexAttribArray(0);
 
   Shader shader("./shaders/basic.vert", "./shaders/basic.frag");
+  shader.enable();
 
   while(!window.closed()) {
     window.clear();
