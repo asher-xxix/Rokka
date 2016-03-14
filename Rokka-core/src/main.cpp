@@ -23,9 +23,6 @@ int main() {
 
 
   GLuint vbo;
-  GLuint vao;
-  glGenVertexArrays(1, &vao);
-  glBindVertexArray(vao);
   glGenBuffers(1, &vbo);
   glBindBuffer(GL_ARRAY_BUFFER, vbo);
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
@@ -37,7 +34,7 @@ int main() {
 
   while(!window.closed()) {
     window.clear();
-    glDrawArrays(GL_ARRAY_BUFFER, 0, 6);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
     window.Update();
   }
 
