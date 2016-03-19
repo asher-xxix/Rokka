@@ -33,3 +33,4 @@ directory.
 
 
 A side note, Vec4 was made because it is useful for colors.
+Also, I am aware "Rokka" is a misreading of 六花, but hey, it's the name now.
