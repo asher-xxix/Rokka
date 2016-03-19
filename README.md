@@ -1,10 +1,10 @@
-# Rokka
+# Rokka     雪
 
 ### Rokka is a hobby project to create a 3d game engine.
 
 If anyone wants to work on this with me, please make a pull request.
 
-If you're on Linux like me, to install glfw, do this
+If you're on Linux, to install glfw, do this
 ```
 cd dir/to/glfw-3.X.X
 cmake -G "Unix Makefiles"
