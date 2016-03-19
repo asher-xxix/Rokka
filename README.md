@@ -1,4 +1,4 @@
-# Rokka     雪
+# Rokka     六花
 
 ### Rokka is a hobby project to create a 3d game engine.
 
