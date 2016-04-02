@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/simple.dir/simple.c.o"
   "simple.pdb"
-  "simple"
+  "simple.app/Contents/MacOS/simple"
 )
 
 # Per-language clean rules from dependency scanning.

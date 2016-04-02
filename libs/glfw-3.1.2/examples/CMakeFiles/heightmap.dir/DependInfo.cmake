@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/glad.c" "/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
-  "/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/examples/heightmap.c" "/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.o"
+  "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/glad.c" "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
+  "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/heightmap.c" "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/heightmap.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -17,7 +17,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

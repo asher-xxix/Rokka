@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
   "CMakeFiles/particles.dir/__/deps/getopt.c.o"
   "particles.pdb"
-  "particles"
+  "particles.app/Contents/MacOS/particles"
 )
 
 # Per-language clean rules from dependency scanning.

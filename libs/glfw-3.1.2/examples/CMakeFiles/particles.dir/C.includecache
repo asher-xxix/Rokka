@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/getopt.c
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.c
 getopt.h
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/getopt.h
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.h
 stddef.h
 -
 string.h
 -
 
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/getopt.h
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.h
 
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/tinycthread.c
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/tinycthread.c
 tinycthread.h
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/tinycthread.h
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/tinycthread.h
 stdlib.h
 -
 signal.h
@@ -36,7 +36,7 @@ process.h
 sys/timeb.h
 -
 
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/deps/tinycthread.h
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/tinycthread.h
 time.h
 -
 pthread.h
@@ -44,7 +44,7 @@ pthread.h
 windows.h
 -
 
-/home/aiz/Documents/arquus/C++Libs/glfw-3.1.2/examples/particles.c
+/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/particles.c
 stdlib.h
 -
 stdio.h

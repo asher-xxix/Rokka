@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/heightmap.dir/heightmap.c.o"
   "CMakeFiles/heightmap.dir/__/deps/glad.c.o"
   "heightmap.pdb"
-  "heightmap"
+  "heightmap.app/Contents/MacOS/heightmap"
 )
 
 # Per-language clean rules from dependency scanning.

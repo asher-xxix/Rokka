@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/threads.dir/threads.c.o"
   "CMakeFiles/threads.dir/__/deps/tinycthread.c.o"
   "threads.pdb"
-  "threads"
+  "threads.app/Contents/MacOS/threads"
 )
 
 # Per-language clean rules from dependency scanning.

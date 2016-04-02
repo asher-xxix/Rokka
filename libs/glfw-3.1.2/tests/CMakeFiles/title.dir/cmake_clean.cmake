@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/title.dir/title.c.o"
   "title.pdb"
-  "title"
+  "title.app/Contents/MacOS/title"
 )
 
 # Per-language clean rules from dependency scanning.

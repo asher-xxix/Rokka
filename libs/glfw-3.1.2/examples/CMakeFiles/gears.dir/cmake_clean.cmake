@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gears.dir/gears.c.o"
   "gears.pdb"
-  "gears"
+  "gears.app/Contents/MacOS/gears"
 )
 
 # Per-language clean rules from dependency scanning.
