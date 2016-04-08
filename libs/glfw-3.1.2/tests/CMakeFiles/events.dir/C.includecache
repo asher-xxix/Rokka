@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.c
+/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/getopt.c
 getopt.h
-/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.h
+/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/getopt.h
 stddef.h
 -
 string.h
 -
 
-/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.h
+/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/getopt.h
 
-/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/events.c
+/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/events.c
 GLFW/glfw3.h
 -
 stdio.h
@@ -30,7 +30,7 @@ string.h
 locale.h
 -
 getopt.h
-/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/getopt.h
+/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/getopt.h
 
 deps/GL/glext.h
 windows.h

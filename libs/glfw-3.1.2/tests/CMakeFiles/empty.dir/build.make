@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.5.0/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_SOURCE_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_BINARY_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/empty.dir/depend.make
@@ -59,16 +59,16 @@ include tests/CMakeFiles/empty.dir/flags.make
 
 tests/CMakeFiles/empty.dir/empty.c.o: tests/CMakeFiles/empty.dir/flags.make
 tests/CMakeFiles/empty.dir/empty.c.o: tests/empty.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/empty.dir/empty.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/empty.dir/empty.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/empty.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/empty.dir/empty.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/empty.dir/empty.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/empty.c
 
 tests/CMakeFiles/empty.dir/empty.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/empty.dir/empty.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/empty.c > CMakeFiles/empty.dir/empty.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/empty.c > CMakeFiles/empty.dir/empty.c.i
 
 tests/CMakeFiles/empty.dir/empty.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/empty.dir/empty.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/empty.c -o CMakeFiles/empty.dir/empty.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/empty.c -o CMakeFiles/empty.dir/empty.c.s
 
 tests/CMakeFiles/empty.dir/empty.c.o.requires:
 
@@ -83,16 +83,16 @@ tests/CMakeFiles/empty.dir/empty.c.o.provides.build: tests/CMakeFiles/empty.dir/
 
 tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o: tests/CMakeFiles/empty.dir/flags.make
 tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o: deps/tinycthread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/empty.dir/__/deps/tinycthread.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/tinycthread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/empty.dir/__/deps/tinycthread.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/tinycthread.c
 
 tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/empty.dir/__/deps/tinycthread.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/tinycthread.c > CMakeFiles/empty.dir/__/deps/tinycthread.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/tinycthread.c > CMakeFiles/empty.dir/__/deps/tinycthread.c.i
 
 tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/empty.dir/__/deps/tinycthread.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/tinycthread.c -o CMakeFiles/empty.dir/__/deps/tinycthread.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/tinycthread.c -o CMakeFiles/empty.dir/__/deps/tinycthread.c.s
 
 tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o.requires:
 
@@ -113,16 +113,34 @@ empty_OBJECTS = \
 # External object files for target empty
 empty_EXTERNAL_OBJECTS =
 
-tests/empty.app/Contents/MacOS/empty: tests/CMakeFiles/empty.dir/empty.c.o
-tests/empty.app/Contents/MacOS/empty: tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o
-tests/empty.app/Contents/MacOS/empty: tests/CMakeFiles/empty.dir/build.make
-tests/empty.app/Contents/MacOS/empty: src/libglfw3.a
-tests/empty.app/Contents/MacOS/empty: tests/CMakeFiles/empty.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable empty.app/Contents/MacOS/empty"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/empty.dir/link.txt --verbose=$(VERBOSE)
+tests/empty: tests/CMakeFiles/empty.dir/empty.c.o
+tests/empty: tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.o
+tests/empty: tests/CMakeFiles/empty.dir/build.make
+tests/empty: src/libglfw3.a
+tests/empty: /usr/lib64/librt.so
+tests/empty: /usr/lib64/libm.so
+tests/empty: /usr/lib64/libX11.so
+tests/empty: /usr/lib64/libXrandr.so
+tests/empty: /usr/lib64/libXinerama.so
+tests/empty: /usr/lib64/libXi.so
+tests/empty: /usr/lib64/libXxf86vm.so
+tests/empty: /usr/lib64/libXcursor.so
+tests/empty: /usr/lib64/libGL.so
+tests/empty: /usr/lib64/librt.so
+tests/empty: /usr/lib64/libm.so
+tests/empty: /usr/lib64/libX11.so
+tests/empty: /usr/lib64/libXrandr.so
+tests/empty: /usr/lib64/libXinerama.so
+tests/empty: /usr/lib64/libXi.so
+tests/empty: /usr/lib64/libXxf86vm.so
+tests/empty: /usr/lib64/libXcursor.so
+tests/empty: /usr/lib64/libGL.so
+tests/empty: tests/CMakeFiles/empty.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable empty"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/empty.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-tests/CMakeFiles/empty.dir/build: tests/empty.app/Contents/MacOS/empty
+tests/CMakeFiles/empty.dir/build: tests/empty
 
 .PHONY : tests/CMakeFiles/empty.dir/build
 
@@ -132,10 +150,10 @@ tests/CMakeFiles/empty.dir/requires: tests/CMakeFiles/empty.dir/__/deps/tinycthr
 .PHONY : tests/CMakeFiles/empty.dir/requires
 
 tests/CMakeFiles/empty.dir/clean:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests && $(CMAKE_COMMAND) -P CMakeFiles/empty.dir/cmake_clean.cmake
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests && $(CMAKE_COMMAND) -P CMakeFiles/empty.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/empty.dir/clean
 
 tests/CMakeFiles/empty.dir/depend:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/CMakeFiles/empty.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/empty.dir/depend
 

@@ -39,38 +39,39 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.5.0/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_SOURCE_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_BINARY_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.5.0/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.5.0/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -88,33 +89,10 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.5.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.5.0/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.5.0/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.5.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
@@ -122,16 +100,38 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_progress_start /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/progress.marks
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles 0
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_progress_start /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/progress.marks
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/CMakeFiles/heightmap.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/heightmap.dir/rule
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/heightmap.dir/rule
 .PHONY : examples/CMakeFiles/heightmap.dir/rule
 
 # Convenience name for target.
@@ -166,87 +166,12 @@ heightmap: examples/CMakeFiles/heightmap.dir/rule
 
 # fast build rule for target.
 heightmap/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/build
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/build
 .PHONY : heightmap/fast
 
 # Convenience name for target.
-examples/CMakeFiles/simple.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/simple.dir/rule
-.PHONY : examples/CMakeFiles/simple.dir/rule
-
-# Convenience name for target.
-simple: examples/CMakeFiles/simple.dir/rule
-
-.PHONY : simple
-
-# fast build rule for target.
-simple/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/build
-.PHONY : simple/fast
-
-# Convenience name for target.
-examples/CMakeFiles/wave.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/wave.dir/rule
-.PHONY : examples/CMakeFiles/wave.dir/rule
-
-# Convenience name for target.
-wave: examples/CMakeFiles/wave.dir/rule
-
-.PHONY : wave
-
-# fast build rule for target.
-wave/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/build
-.PHONY : wave/fast
-
-# Convenience name for target.
-examples/CMakeFiles/splitview.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/splitview.dir/rule
-.PHONY : examples/CMakeFiles/splitview.dir/rule
-
-# Convenience name for target.
-splitview: examples/CMakeFiles/splitview.dir/rule
-
-.PHONY : splitview
-
-# fast build rule for target.
-splitview/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/build
-.PHONY : splitview/fast
-
-# Convenience name for target.
-examples/CMakeFiles/particles.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/particles.dir/rule
-.PHONY : examples/CMakeFiles/particles.dir/rule
-
-# Convenience name for target.
-particles: examples/CMakeFiles/particles.dir/rule
-
-.PHONY : particles
-
-# fast build rule for target.
-particles/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/build
-.PHONY : particles/fast
-
-# Convenience name for target.
-examples/CMakeFiles/boing.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/boing.dir/rule
-.PHONY : examples/CMakeFiles/boing.dir/rule
-
-# Convenience name for target.
-boing: examples/CMakeFiles/boing.dir/rule
-
-.PHONY : boing
-
-# fast build rule for target.
-boing/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/build
-.PHONY : boing/fast
-
-# Convenience name for target.
 examples/CMakeFiles/gears.dir/rule:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/gears.dir/rule
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/gears.dir/rule
 .PHONY : examples/CMakeFiles/gears.dir/rule
 
 # Convenience name for target.
@@ -256,8 +181,83 @@ gears: examples/CMakeFiles/gears.dir/rule
 
 # fast build rule for target.
 gears/fast:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/build
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/build
 .PHONY : gears/fast
+
+# Convenience name for target.
+examples/CMakeFiles/particles.dir/rule:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/particles.dir/rule
+.PHONY : examples/CMakeFiles/particles.dir/rule
+
+# Convenience name for target.
+particles: examples/CMakeFiles/particles.dir/rule
+
+.PHONY : particles
+
+# fast build rule for target.
+particles/fast:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/build
+.PHONY : particles/fast
+
+# Convenience name for target.
+examples/CMakeFiles/wave.dir/rule:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/wave.dir/rule
+.PHONY : examples/CMakeFiles/wave.dir/rule
+
+# Convenience name for target.
+wave: examples/CMakeFiles/wave.dir/rule
+
+.PHONY : wave
+
+# fast build rule for target.
+wave/fast:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/build
+.PHONY : wave/fast
+
+# Convenience name for target.
+examples/CMakeFiles/boing.dir/rule:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/boing.dir/rule
+.PHONY : examples/CMakeFiles/boing.dir/rule
+
+# Convenience name for target.
+boing: examples/CMakeFiles/boing.dir/rule
+
+.PHONY : boing
+
+# fast build rule for target.
+boing/fast:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/build
+.PHONY : boing/fast
+
+# Convenience name for target.
+examples/CMakeFiles/simple.dir/rule:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/simple.dir/rule
+.PHONY : examples/CMakeFiles/simple.dir/rule
+
+# Convenience name for target.
+simple: examples/CMakeFiles/simple.dir/rule
+
+.PHONY : simple
+
+# fast build rule for target.
+simple/fast:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/build
+.PHONY : simple/fast
+
+# Convenience name for target.
+examples/CMakeFiles/splitview.dir/rule:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/splitview.dir/rule
+.PHONY : examples/CMakeFiles/splitview.dir/rule
+
+# Convenience name for target.
+splitview: examples/CMakeFiles/splitview.dir/rule
+
+.PHONY : splitview
+
+# fast build rule for target.
+splitview/fast:
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/build
+.PHONY : splitview/fast
 
 __/deps/getopt.o: __/deps/getopt.c.o
 
@@ -265,7 +265,7 @@ __/deps/getopt.o: __/deps/getopt.c.o
 
 # target to build an object file
 __/deps/getopt.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/getopt.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/getopt.c.o
 .PHONY : __/deps/getopt.c.o
 
 __/deps/getopt.i: __/deps/getopt.c.i
@@ -274,7 +274,7 @@ __/deps/getopt.i: __/deps/getopt.c.i
 
 # target to preprocess a source file
 __/deps/getopt.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/getopt.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/getopt.c.i
 .PHONY : __/deps/getopt.c.i
 
 __/deps/getopt.s: __/deps/getopt.c.s
@@ -283,7 +283,7 @@ __/deps/getopt.s: __/deps/getopt.c.s
 
 # target to generate assembly for a file
 __/deps/getopt.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/getopt.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/getopt.c.s
 .PHONY : __/deps/getopt.c.s
 
 __/deps/glad.o: __/deps/glad.c.o
@@ -292,7 +292,7 @@ __/deps/glad.o: __/deps/glad.c.o
 
 # target to build an object file
 __/deps/glad.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o
 .PHONY : __/deps/glad.c.o
 
 __/deps/glad.i: __/deps/glad.c.i
@@ -301,7 +301,7 @@ __/deps/glad.i: __/deps/glad.c.i
 
 # target to preprocess a source file
 __/deps/glad.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/__/deps/glad.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/__/deps/glad.c.i
 .PHONY : __/deps/glad.c.i
 
 __/deps/glad.s: __/deps/glad.c.s
@@ -310,7 +310,7 @@ __/deps/glad.s: __/deps/glad.c.s
 
 # target to generate assembly for a file
 __/deps/glad.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/__/deps/glad.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/__/deps/glad.c.s
 .PHONY : __/deps/glad.c.s
 
 __/deps/tinycthread.o: __/deps/tinycthread.c.o
@@ -319,7 +319,7 @@ __/deps/tinycthread.o: __/deps/tinycthread.c.o
 
 # target to build an object file
 __/deps/tinycthread.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o
 .PHONY : __/deps/tinycthread.c.o
 
 __/deps/tinycthread.i: __/deps/tinycthread.c.i
@@ -328,7 +328,7 @@ __/deps/tinycthread.i: __/deps/tinycthread.c.i
 
 # target to preprocess a source file
 __/deps/tinycthread.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.i
 .PHONY : __/deps/tinycthread.c.i
 
 __/deps/tinycthread.s: __/deps/tinycthread.c.s
@@ -337,7 +337,7 @@ __/deps/tinycthread.s: __/deps/tinycthread.c.s
 
 # target to generate assembly for a file
 __/deps/tinycthread.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.s
 .PHONY : __/deps/tinycthread.c.s
 
 boing.o: boing.c.o
@@ -346,7 +346,7 @@ boing.o: boing.c.o
 
 # target to build an object file
 boing.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/boing.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/boing.c.o
 .PHONY : boing.c.o
 
 boing.i: boing.c.i
@@ -355,7 +355,7 @@ boing.i: boing.c.i
 
 # target to preprocess a source file
 boing.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/boing.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/boing.c.i
 .PHONY : boing.c.i
 
 boing.s: boing.c.s
@@ -364,7 +364,7 @@ boing.s: boing.c.s
 
 # target to generate assembly for a file
 boing.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/boing.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/boing.dir/build.make examples/CMakeFiles/boing.dir/boing.c.s
 .PHONY : boing.c.s
 
 gears.o: gears.c.o
@@ -373,7 +373,7 @@ gears.o: gears.c.o
 
 # target to build an object file
 gears.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/gears.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/gears.c.o
 .PHONY : gears.c.o
 
 gears.i: gears.c.i
@@ -382,7 +382,7 @@ gears.i: gears.c.i
 
 # target to preprocess a source file
 gears.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/gears.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/gears.c.i
 .PHONY : gears.c.i
 
 gears.s: gears.c.s
@@ -391,7 +391,7 @@ gears.s: gears.c.s
 
 # target to generate assembly for a file
 gears.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/gears.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/gears.dir/build.make examples/CMakeFiles/gears.dir/gears.c.s
 .PHONY : gears.c.s
 
 heightmap.o: heightmap.c.o
@@ -400,7 +400,7 @@ heightmap.o: heightmap.c.o
 
 # target to build an object file
 heightmap.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/heightmap.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/heightmap.c.o
 .PHONY : heightmap.c.o
 
 heightmap.i: heightmap.c.i
@@ -409,7 +409,7 @@ heightmap.i: heightmap.c.i
 
 # target to preprocess a source file
 heightmap.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/heightmap.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/heightmap.c.i
 .PHONY : heightmap.c.i
 
 heightmap.s: heightmap.c.s
@@ -418,7 +418,7 @@ heightmap.s: heightmap.c.s
 
 # target to generate assembly for a file
 heightmap.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/heightmap.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/heightmap.dir/build.make examples/CMakeFiles/heightmap.dir/heightmap.c.s
 .PHONY : heightmap.c.s
 
 particles.o: particles.c.o
@@ -427,7 +427,7 @@ particles.o: particles.c.o
 
 # target to build an object file
 particles.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/particles.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/particles.c.o
 .PHONY : particles.c.o
 
 particles.i: particles.c.i
@@ -436,7 +436,7 @@ particles.i: particles.c.i
 
 # target to preprocess a source file
 particles.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/particles.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/particles.c.i
 .PHONY : particles.c.i
 
 particles.s: particles.c.s
@@ -445,7 +445,7 @@ particles.s: particles.c.s
 
 # target to generate assembly for a file
 particles.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/particles.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/particles.dir/build.make examples/CMakeFiles/particles.dir/particles.c.s
 .PHONY : particles.c.s
 
 simple.o: simple.c.o
@@ -454,7 +454,7 @@ simple.o: simple.c.o
 
 # target to build an object file
 simple.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/simple.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/simple.c.o
 .PHONY : simple.c.o
 
 simple.i: simple.c.i
@@ -463,7 +463,7 @@ simple.i: simple.c.i
 
 # target to preprocess a source file
 simple.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/simple.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/simple.c.i
 .PHONY : simple.c.i
 
 simple.s: simple.c.s
@@ -472,7 +472,7 @@ simple.s: simple.c.s
 
 # target to generate assembly for a file
 simple.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/simple.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/simple.c.s
 .PHONY : simple.c.s
 
 splitview.o: splitview.c.o
@@ -481,7 +481,7 @@ splitview.o: splitview.c.o
 
 # target to build an object file
 splitview.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/splitview.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/splitview.c.o
 .PHONY : splitview.c.o
 
 splitview.i: splitview.c.i
@@ -490,7 +490,7 @@ splitview.i: splitview.c.i
 
 # target to preprocess a source file
 splitview.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/splitview.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/splitview.c.i
 .PHONY : splitview.c.i
 
 splitview.s: splitview.c.s
@@ -499,7 +499,7 @@ splitview.s: splitview.c.s
 
 # target to generate assembly for a file
 splitview.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/splitview.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/splitview.dir/build.make examples/CMakeFiles/splitview.dir/splitview.c.s
 .PHONY : splitview.c.s
 
 wave.o: wave.c.o
@@ -508,7 +508,7 @@ wave.o: wave.c.o
 
 # target to build an object file
 wave.c.o:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/wave.c.o
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/wave.c.o
 .PHONY : wave.c.o
 
 wave.i: wave.c.i
@@ -517,7 +517,7 @@ wave.i: wave.c.i
 
 # target to preprocess a source file
 wave.c.i:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/wave.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/wave.c.i
 .PHONY : wave.c.i
 
 wave.s: wave.c.s
@@ -526,7 +526,7 @@ wave.s: wave.c.s
 
 # target to generate assembly for a file
 wave.c.s:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/wave.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(MAKE) -f examples/CMakeFiles/wave.dir/build.make examples/CMakeFiles/wave.dir/wave.c.s
 .PHONY : wave.c.s
 
 # Help Target
@@ -535,19 +535,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
+	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... heightmap"
-	@echo "... list_install_components"
-	@echo "... simple"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... wave"
-	@echo "... splitview"
-	@echo "... particles"
-	@echo "... boing"
 	@echo "... gears"
+	@echo "... particles"
+	@echo "... wave"
+	@echo "... boing"
+	@echo "... simple"
+	@echo "... splitview"
+	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... edit_cache"
 	@echo "... __/deps/getopt.o"
 	@echo "... __/deps/getopt.i"
 	@echo "... __/deps/getopt.s"
@@ -589,6 +589,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

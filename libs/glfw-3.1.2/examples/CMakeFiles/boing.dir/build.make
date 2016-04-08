@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.5.0/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_SOURCE_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_BINARY_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/boing.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/boing.dir/flags.make
 
 examples/CMakeFiles/boing.dir/boing.c.o: examples/CMakeFiles/boing.dir/flags.make
 examples/CMakeFiles/boing.dir/boing.c.o: examples/boing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/boing.dir/boing.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/boing.dir/boing.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/boing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/boing.dir/boing.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/boing.dir/boing.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/boing.c
 
 examples/CMakeFiles/boing.dir/boing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/boing.dir/boing.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/boing.c > CMakeFiles/boing.dir/boing.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/boing.c > CMakeFiles/boing.dir/boing.c.i
 
 examples/CMakeFiles/boing.dir/boing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/boing.dir/boing.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/boing.c -o CMakeFiles/boing.dir/boing.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/boing.c -o CMakeFiles/boing.dir/boing.c.s
 
 examples/CMakeFiles/boing.dir/boing.c.o.requires:
 
@@ -88,15 +88,24 @@ boing_OBJECTS = \
 # External object files for target boing
 boing_EXTERNAL_OBJECTS =
 
-examples/boing.app/Contents/MacOS/boing: examples/CMakeFiles/boing.dir/boing.c.o
-examples/boing.app/Contents/MacOS/boing: examples/CMakeFiles/boing.dir/build.make
-examples/boing.app/Contents/MacOS/boing: src/libglfw3.a
-examples/boing.app/Contents/MacOS/boing: examples/CMakeFiles/boing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable boing.app/Contents/MacOS/boing"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boing.dir/link.txt --verbose=$(VERBOSE)
+examples/boing: examples/CMakeFiles/boing.dir/boing.c.o
+examples/boing: examples/CMakeFiles/boing.dir/build.make
+examples/boing: src/libglfw3.a
+examples/boing: /usr/lib64/librt.so
+examples/boing: /usr/lib64/libm.so
+examples/boing: /usr/lib64/libX11.so
+examples/boing: /usr/lib64/libXrandr.so
+examples/boing: /usr/lib64/libXinerama.so
+examples/boing: /usr/lib64/libXi.so
+examples/boing: /usr/lib64/libXxf86vm.so
+examples/boing: /usr/lib64/libXcursor.so
+examples/boing: /usr/lib64/libGL.so
+examples/boing: examples/CMakeFiles/boing.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable boing"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/boing.dir/build: examples/boing.app/Contents/MacOS/boing
+examples/CMakeFiles/boing.dir/build: examples/boing
 
 .PHONY : examples/CMakeFiles/boing.dir/build
 
@@ -105,10 +114,10 @@ examples/CMakeFiles/boing.dir/requires: examples/CMakeFiles/boing.dir/boing.c.o.
 .PHONY : examples/CMakeFiles/boing.dir/requires
 
 examples/CMakeFiles/boing.dir/clean:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/boing.dir/cmake_clean.cmake
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/boing.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/boing.dir/clean
 
 examples/CMakeFiles/boing.dir/depend:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/boing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/boing.dir/depend
 

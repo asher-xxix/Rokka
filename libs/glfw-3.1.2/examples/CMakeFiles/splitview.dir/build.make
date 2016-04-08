@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.5.0/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_SOURCE_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_BINARY_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/splitview.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/splitview.dir/flags.make
 
 examples/CMakeFiles/splitview.dir/splitview.c.o: examples/CMakeFiles/splitview.dir/flags.make
 examples/CMakeFiles/splitview.dir/splitview.c.o: examples/splitview.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/splitview.dir/splitview.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/splitview.dir/splitview.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/splitview.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/splitview.dir/splitview.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/splitview.dir/splitview.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/splitview.c
 
 examples/CMakeFiles/splitview.dir/splitview.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/splitview.dir/splitview.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/splitview.c > CMakeFiles/splitview.dir/splitview.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/splitview.c > CMakeFiles/splitview.dir/splitview.c.i
 
 examples/CMakeFiles/splitview.dir/splitview.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/splitview.dir/splitview.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/splitview.c -o CMakeFiles/splitview.dir/splitview.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/splitview.c -o CMakeFiles/splitview.dir/splitview.c.s
 
 examples/CMakeFiles/splitview.dir/splitview.c.o.requires:
 
@@ -88,15 +88,24 @@ splitview_OBJECTS = \
 # External object files for target splitview
 splitview_EXTERNAL_OBJECTS =
 
-examples/splitview.app/Contents/MacOS/splitview: examples/CMakeFiles/splitview.dir/splitview.c.o
-examples/splitview.app/Contents/MacOS/splitview: examples/CMakeFiles/splitview.dir/build.make
-examples/splitview.app/Contents/MacOS/splitview: src/libglfw3.a
-examples/splitview.app/Contents/MacOS/splitview: examples/CMakeFiles/splitview.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable splitview.app/Contents/MacOS/splitview"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/splitview.dir/link.txt --verbose=$(VERBOSE)
+examples/splitview: examples/CMakeFiles/splitview.dir/splitview.c.o
+examples/splitview: examples/CMakeFiles/splitview.dir/build.make
+examples/splitview: src/libglfw3.a
+examples/splitview: /usr/lib64/librt.so
+examples/splitview: /usr/lib64/libm.so
+examples/splitview: /usr/lib64/libX11.so
+examples/splitview: /usr/lib64/libXrandr.so
+examples/splitview: /usr/lib64/libXinerama.so
+examples/splitview: /usr/lib64/libXi.so
+examples/splitview: /usr/lib64/libXxf86vm.so
+examples/splitview: /usr/lib64/libXcursor.so
+examples/splitview: /usr/lib64/libGL.so
+examples/splitview: examples/CMakeFiles/splitview.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable splitview"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/splitview.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/splitview.dir/build: examples/splitview.app/Contents/MacOS/splitview
+examples/CMakeFiles/splitview.dir/build: examples/splitview
 
 .PHONY : examples/CMakeFiles/splitview.dir/build
 
@@ -105,10 +114,10 @@ examples/CMakeFiles/splitview.dir/requires: examples/CMakeFiles/splitview.dir/sp
 .PHONY : examples/CMakeFiles/splitview.dir/requires
 
 examples/CMakeFiles/splitview.dir/clean:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/splitview.dir/cmake_clean.cmake
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/splitview.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/splitview.dir/clean
 
 examples/CMakeFiles/splitview.dir/depend:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/splitview.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/splitview.dir/depend
 
