@@ -38,5 +38,7 @@ g++ graphics/shader.cpp graphics/window.cpp main.cpp -lGL -lGLU -lglfw3 -lX11 -l
 Notice the `lGLEW` at the very end. And we now place our executables in the bin/directory.
 
 
+I have yet to make a reliable way to build this on OS X.
+
 A side note, Vec4 was made because it is useful for colors.
 Also, I am aware "Rokka" is a misreading of 六花, but hey, it's the name now.
