@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lm -ldl -lXinerama -lXcursor -lGL -lGLU -lGLEW
+CXXFLAGS = -lGLEW -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -lm -ldl -lXinerama -lXcursor -lGL -lGLU 
 
 
 output: shader.o window.o main.o

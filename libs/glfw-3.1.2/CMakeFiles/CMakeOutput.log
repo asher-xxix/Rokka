@@ -485,3 +485,305 @@ int main(int argc, char** argv)
 #endif
 }
 
+The system is: Linux - 4.4.5-1-ARCH - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_07ed9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_07ed9.dir/build.make CMakeFiles/cmTC_07ed9.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_07ed9.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_07ed9.dir/testCCompiler.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_07ed9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07ed9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_07ed9.dir/testCCompiler.c.o  -o cmTC_07ed9 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bd2ad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd2ad.dir/build.make CMakeFiles/cmTC_bd2ad.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_bd2ad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd2ad.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o  -o cmTC_bd2ad -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/lto-wrapper
+Target: x86_64-unknown-linux-gnu
+Configured with: /build/gcc/src/gcc-5-20160209/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --enable-libmpx --with-system-zlib --with-isl --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-gnu-indirect-function --disable-multilib --disable-werror --enable-checking=release
+Thread model: posix
+gcc version 5.3.0 (GCC) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bd2ad' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/collect2 -plugin /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8i61Sm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bd2ad /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../.. CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/crtend.o /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crtn.o
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_bd2ad/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_bd2ad.dir/build.make CMakeFiles/cmTC_bd2ad.dir/build]
+  ignore line: [make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_bd2ad]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd2ad.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o  -o cmTC_bd2ad -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Configured with: /build/gcc/src/gcc-5-20160209/configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.archlinux.org/ --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++ --enable-shared --enable-threads=posix --enable-libmpx --with-system-zlib --with-isl --enable-__cxa_atexit --disable-libunwind-exceptions --enable-clocale=gnu --disable-libstdcxx-pch --disable-libssp --enable-gnu-unique-object --enable-linker-build-id --enable-lto --enable-plugin --enable-install-libiberty --with-linker-hash-style=gnu --enable-gnu-indirect-function --disable-multilib --disable-werror --enable-checking=release]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bd2ad' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/collect2 -plugin /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8i61Sm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bd2ad /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../.. CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/crtend.o /usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crtn.o]
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc8i61Sm.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_bd2ad] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0]
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../..]
+    arg [CMakeFiles/cmTC_bd2ad.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0] ==> [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-unknown-linux-gnu/5.3.0;/usr/lib;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_45e52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45e52.dir/build.make CMakeFiles/cmTC_45e52.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_45e52.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_45e52.dir/feature_tests.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/feature_tests.c
+Linking C executable cmTC_45e52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45e52.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_45e52.dir/feature_tests.c.o  -o cmTC_45e52 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_39497/fast"
+/usr/bin/make -f CMakeFiles/cmTC_39497.dir/build.make CMakeFiles/cmTC_39497.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39497.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_39497.dir/feature_tests.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/feature_tests.c
+Linking C executable cmTC_39497
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39497.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_39497.dir/feature_tests.c.o  -o cmTC_39497 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cc822/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cc822.dir/build.make CMakeFiles/cmTC_cc822.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc822.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_cc822.dir/feature_tests.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cc822
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc822.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_cc822.dir/feature_tests.c.o  -o cmTC_cc822 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_45cad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45cad.dir/build.make CMakeFiles/cmTC_45cad.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_45cad.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_45cad.dir/CheckIncludeFile.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_45cad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45cad.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_45cad.dir/CheckIncludeFile.c.o  -o cmTC_45cad -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bca18/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bca18.dir/build.make CMakeFiles/cmTC_bca18.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bca18.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bca18.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bca18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bca18.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bca18.dir/CheckFunctionExists.c.o  -o cmTC_bca18 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5eb67/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5eb67.dir/build.make CMakeFiles/cmTC_5eb67.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5eb67.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_5eb67.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5eb67
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5eb67.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_5eb67.dir/CheckFunctionExists.c.o  -o cmTC_5eb67 -rdynamic /usr/lib64/libX11.so /usr/lib64/libXext.so 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ea881/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ea881.dir/build.make CMakeFiles/cmTC_ea881.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ea881.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_ea881.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ea881
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea881.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_ea881.dir/CheckFunctionExists.c.o  -o cmTC_ea881 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_23a75/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23a75.dir/build.make CMakeFiles/cmTC_23a75.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23a75.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_23a75.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_23a75
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23a75.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_23a75.dir/CheckFunctionExists.c.o  -o cmTC_23a75 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_55b04/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55b04.dir/build.make CMakeFiles/cmTC_55b04.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55b04.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_55b04.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_55b04
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55b04.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_55b04.dir/CheckFunctionExists.c.o  -o cmTC_55b04 -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5c01e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5c01e.dir/build.make CMakeFiles/cmTC_5c01e.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c01e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_5c01e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5c01e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c01e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_5c01e.dir/CheckFunctionExists.c.o  -o cmTC_5c01e -rdynamic 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_44a8d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44a8d.dir/build.make CMakeFiles/cmTC_44a8d.dir/build
+make[1]: Entering directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44a8d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_44a8d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_44a8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44a8d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_44a8d.dir/CheckFunctionExists.c.o  -o cmTC_44a8d -rdynamic -lICE 
+make[1]: Leaving directory '/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles/CMakeTmp'
+
+

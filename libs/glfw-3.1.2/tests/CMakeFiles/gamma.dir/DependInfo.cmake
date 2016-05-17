@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/getopt.c" "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/__/deps/getopt.c.o"
-  "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/gamma.c" "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/gamma.c.o"
+  "/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/getopt.c" "/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/__/deps/getopt.c.o"
+  "/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/gamma.c" "/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/CMakeFiles/gamma.dir/gamma.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -17,7 +17,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

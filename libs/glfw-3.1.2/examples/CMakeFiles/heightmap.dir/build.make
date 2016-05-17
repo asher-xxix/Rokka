@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.5.0/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_SOURCE_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_BINARY_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/heightmap.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/heightmap.dir/flags.make
 
 examples/CMakeFiles/heightmap.dir/heightmap.c.o: examples/CMakeFiles/heightmap.dir/flags.make
 examples/CMakeFiles/heightmap.dir/heightmap.c.o: examples/heightmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/heightmap.dir/heightmap.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/heightmap.dir/heightmap.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/heightmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/heightmap.dir/heightmap.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/heightmap.dir/heightmap.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/heightmap.c
 
 examples/CMakeFiles/heightmap.dir/heightmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/heightmap.dir/heightmap.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/heightmap.c > CMakeFiles/heightmap.dir/heightmap.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/heightmap.c > CMakeFiles/heightmap.dir/heightmap.c.i
 
 examples/CMakeFiles/heightmap.dir/heightmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/heightmap.dir/heightmap.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/heightmap.c -o CMakeFiles/heightmap.dir/heightmap.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/heightmap.c -o CMakeFiles/heightmap.dir/heightmap.c.s
 
 examples/CMakeFiles/heightmap.dir/heightmap.c.o.requires:
 
@@ -83,16 +83,16 @@ examples/CMakeFiles/heightmap.dir/heightmap.c.o.provides.build: examples/CMakeFi
 
 examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o: examples/CMakeFiles/heightmap.dir/flags.make
 examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o: deps/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/heightmap.dir/__/deps/glad.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/heightmap.dir/__/deps/glad.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/glad.c
 
 examples/CMakeFiles/heightmap.dir/__/deps/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/heightmap.dir/__/deps/glad.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/glad.c > CMakeFiles/heightmap.dir/__/deps/glad.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/glad.c > CMakeFiles/heightmap.dir/__/deps/glad.c.i
 
 examples/CMakeFiles/heightmap.dir/__/deps/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/heightmap.dir/__/deps/glad.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/deps/glad.c -o CMakeFiles/heightmap.dir/__/deps/glad.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/deps/glad.c -o CMakeFiles/heightmap.dir/__/deps/glad.c.s
 
 examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o.requires:
 
@@ -113,16 +113,25 @@ heightmap_OBJECTS = \
 # External object files for target heightmap
 heightmap_EXTERNAL_OBJECTS =
 
-examples/heightmap.app/Contents/MacOS/heightmap: examples/CMakeFiles/heightmap.dir/heightmap.c.o
-examples/heightmap.app/Contents/MacOS/heightmap: examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o
-examples/heightmap.app/Contents/MacOS/heightmap: examples/CMakeFiles/heightmap.dir/build.make
-examples/heightmap.app/Contents/MacOS/heightmap: src/libglfw3.a
-examples/heightmap.app/Contents/MacOS/heightmap: examples/CMakeFiles/heightmap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable heightmap.app/Contents/MacOS/heightmap"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/heightmap.dir/link.txt --verbose=$(VERBOSE)
+examples/heightmap: examples/CMakeFiles/heightmap.dir/heightmap.c.o
+examples/heightmap: examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o
+examples/heightmap: examples/CMakeFiles/heightmap.dir/build.make
+examples/heightmap: src/libglfw3.a
+examples/heightmap: /usr/lib64/librt.so
+examples/heightmap: /usr/lib64/libm.so
+examples/heightmap: /usr/lib64/libX11.so
+examples/heightmap: /usr/lib64/libXrandr.so
+examples/heightmap: /usr/lib64/libXinerama.so
+examples/heightmap: /usr/lib64/libXi.so
+examples/heightmap: /usr/lib64/libXxf86vm.so
+examples/heightmap: /usr/lib64/libXcursor.so
+examples/heightmap: /usr/lib64/libGL.so
+examples/heightmap: examples/CMakeFiles/heightmap.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable heightmap"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/heightmap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/heightmap.dir/build: examples/heightmap.app/Contents/MacOS/heightmap
+examples/CMakeFiles/heightmap.dir/build: examples/heightmap
 
 .PHONY : examples/CMakeFiles/heightmap.dir/build
 
@@ -132,10 +141,10 @@ examples/CMakeFiles/heightmap.dir/requires: examples/CMakeFiles/heightmap.dir/__
 .PHONY : examples/CMakeFiles/heightmap.dir/requires
 
 examples/CMakeFiles/heightmap.dir/clean:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/heightmap.dir/cmake_clean.cmake
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/heightmap.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/heightmap.dir/clean
 
 examples/CMakeFiles/heightmap.dir/depend:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/heightmap.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/heightmap.dir/depend
 

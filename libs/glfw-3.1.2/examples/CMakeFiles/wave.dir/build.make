@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.5.0/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.5.0/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_SOURCE_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2
+CMAKE_BINARY_DIR = /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/wave.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/wave.dir/flags.make
 
 examples/CMakeFiles/wave.dir/wave.c.o: examples/CMakeFiles/wave.dir/flags.make
 examples/CMakeFiles/wave.dir/wave.c.o: examples/wave.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/wave.dir/wave.c.o"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wave.dir/wave.c.o   -c /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/wave.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/wave.dir/wave.c.o"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/wave.dir/wave.c.o   -c /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/wave.c
 
 examples/CMakeFiles/wave.dir/wave.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/wave.dir/wave.c.i"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/wave.c > CMakeFiles/wave.dir/wave.c.i
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/wave.c > CMakeFiles/wave.dir/wave.c.i
 
 examples/CMakeFiles/wave.dir/wave.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/wave.dir/wave.c.s"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/wave.c -o CMakeFiles/wave.dir/wave.c.s
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/wave.c -o CMakeFiles/wave.dir/wave.c.s
 
 examples/CMakeFiles/wave.dir/wave.c.o.requires:
 
@@ -88,15 +88,24 @@ wave_OBJECTS = \
 # External object files for target wave
 wave_EXTERNAL_OBJECTS =
 
-examples/wave.app/Contents/MacOS/wave: examples/CMakeFiles/wave.dir/wave.c.o
-examples/wave.app/Contents/MacOS/wave: examples/CMakeFiles/wave.dir/build.make
-examples/wave.app/Contents/MacOS/wave: src/libglfw3.a
-examples/wave.app/Contents/MacOS/wave: examples/CMakeFiles/wave.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable wave.app/Contents/MacOS/wave"
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wave.dir/link.txt --verbose=$(VERBOSE)
+examples/wave: examples/CMakeFiles/wave.dir/wave.c.o
+examples/wave: examples/CMakeFiles/wave.dir/build.make
+examples/wave: src/libglfw3.a
+examples/wave: /usr/lib64/librt.so
+examples/wave: /usr/lib64/libm.so
+examples/wave: /usr/lib64/libX11.so
+examples/wave: /usr/lib64/libXrandr.so
+examples/wave: /usr/lib64/libXinerama.so
+examples/wave: /usr/lib64/libXi.so
+examples/wave: /usr/lib64/libXxf86vm.so
+examples/wave: /usr/lib64/libXcursor.so
+examples/wave: /usr/lib64/libGL.so
+examples/wave: examples/CMakeFiles/wave.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable wave"
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wave.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-examples/CMakeFiles/wave.dir/build: examples/wave.app/Contents/MacOS/wave
+examples/CMakeFiles/wave.dir/build: examples/wave
 
 .PHONY : examples/CMakeFiles/wave.dir/build
 
@@ -105,10 +114,10 @@ examples/CMakeFiles/wave.dir/requires: examples/CMakeFiles/wave.dir/wave.c.o.req
 .PHONY : examples/CMakeFiles/wave.dir/requires
 
 examples/CMakeFiles/wave.dir/clean:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/wave.dir/cmake_clean.cmake
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/wave.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/wave.dir/clean
 
 examples/CMakeFiles/wave.dir/depend:
-	cd /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2 /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples /Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2 /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples /home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/examples/CMakeFiles/wave.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/wave.dir/depend
 

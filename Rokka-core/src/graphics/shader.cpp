@@ -1,4 +1,5 @@
 #include "shader.h"
+#include "../utils/fileutils.h"
 
 namespace rokka { namespace graphics {
 

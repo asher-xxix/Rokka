@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/lynn/Documents/chandrian/haliax/Rokka/libs/glfw-3.1.2/tests/cursor.c
+/home/aiz/Documents/arquus/Rokka/libs/glfw-3.1.2/tests/cursor.c
 GLFW/glfw3.h
 -
 math.h
