@@ -1,4 +1,5 @@
 #include "./graphics/window.h"
+#include "./graphics/shader.h"
 #include "./math/math.h"
 
 
@@ -9,31 +10,31 @@ int main() {
   Window window("Rokka", 800, 600);
   glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
-  GLuint vao;
-  glGenVertexArrays(1, &vao);
-  glBindVertexArray(vao);
+
+
+  GLfloat vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+    -0.5f,  0.5f, 0.0f,
+     0.5f,  0.5f, 0.0f,
+     0.5f,  0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.0f
+  };
+
+
+  GLuint vbo;
+  glGenBuffers(1, &vbo);
+  glBindBuffer(GL_ARRAY_BUFFER, vbo);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+  glEnableVertexAttribArray(0);
+
+  Shader shader("./shaders/basic.vert", "./shaders/basic.frag");
+  shader.enable();
 
   while(!window.closed()) {
     window.clear();
-    if(window.isKeyPressed(GLFW_KEY_A)) {
-      std::cout << "PRESSED!" << std::endl;
-    }
-    if(window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT)) {
-      std::cout << "PRESSED MOUSE!" << std::endl;
-    }
-
-    double x, y;
-    window.getMousePosition(x, y);
-    std::cout << x << ", " << y << std::endl;
-
-#if 0
-    glBegin(GL_TRIANGLES);
-    glVertex2f(-0.5f, -0.5f);
-    glVertex2f(0.0f, 0.5f);
-    glVertex2f(0.5f, -0.5f);
-    glEnd();
-#endif
-    glDrawArrays(GL_ARRAY_BUFFER, 0, 6);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
     window.Update();
   }
 
