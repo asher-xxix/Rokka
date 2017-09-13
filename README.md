@@ -38,7 +38,34 @@ g++ graphics/shader.cpp graphics/window.cpp main.cpp -lGL -lGLU -lglfw3 -lX11 -l
 Notice the `lGLEW` at the very end. And we now place our executables in the bin/directory.
 
 
-I have yet to make a reliable way to build this on OS X.
+~~I have yet to make a reliable way to build this on OS X.~~
+
+-------
+### I'm making a mac version now
+
+You will need this
+```
+brew install glfw3
+brew install glew
+```
+
+Header path is
+```
+/usr/local/include
+```
+
+Link libraries:
+```
+OpenGL.framework
+libGLEW.2.1.0.dylib
+libglfw.3.2.dylib
+```
+
+
+
+
+
+------
 
 A side note, Vec4 was made because it is useful for colors.
 Also, I am aware "Rokka" is a misreading of 六花, but hey, it's the name now.
