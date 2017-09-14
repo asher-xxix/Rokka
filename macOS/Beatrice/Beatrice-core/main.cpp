@@ -25,6 +25,15 @@ int main(int argc, const char * argv[]) {
  
     while (!window.Closed()) {
         window.Clear();
+        
+        glBegin(GL_QUADS);
+        glVertex2f(-0.5f, -0.5f);
+        glVertex2f(-0.0f, 0.5f);
+        glVertex2f( 0.5f, 0.5f);
+        glVertex2f(0.5f, -0.5f);
+        glEnd();
+        
+        
         window.Update();
     }
     

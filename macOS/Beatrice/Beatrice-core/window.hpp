@@ -14,6 +14,8 @@
 namespace Beatrice {
     namespace graphics {
         
+        void WindowResize(GLFWwindow *_window, int _width, int _height);
+        
         class Window {
         private:
             int _width;
@@ -27,9 +29,15 @@ namespace Beatrice {
         public:
             Window(const char *title, int width, int height);
             ~Window();
-            void Update() const;
+            void Update();
             bool Closed() const;
             void Clear() const;
+            inline int GetWidth() const {
+                return _width;
+            }
+            inline int GetHeight() const {
+                return _height;
+            }
         };
     }
 }

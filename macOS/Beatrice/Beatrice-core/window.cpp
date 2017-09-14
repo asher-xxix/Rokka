@@ -24,8 +24,12 @@ namespace Beatrice {
             glfwTerminate();
         }
         
-        void Window::Update() const {
+        void Window::Update() {
             glfwPollEvents();
+            int screenWidth;
+            int screenHeight;
+            glfwGetFramebufferSize(_window, &screenWidth, &screenHeight);    // needed for mac retina display
+            
             glfwSwapBuffers(_window);
         }
         
@@ -48,16 +52,12 @@ namespace Beatrice {
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
             glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
             glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);    // this line is needed for mac!
-            glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+//            glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
             
             
-
-
             _window = glfwCreateWindow(_width, _height, _title, NULL, NULL);
             
-            int screenWidth;
-            int screenHeight;
-            glfwGetFramebufferSize(_window, &screenWidth, &screenHeight);    // needed for mac retina display
+            
             
             if (!_window) {
                 std::cout << "The glfw window failed to be created!\n";
@@ -68,8 +68,14 @@ namespace Beatrice {
             
             glfwMakeContextCurrent(_window);
             // glewExperimental = GL_TRUE;     // allows newer opengl features to be used
-            glViewport(0, 0, screenWidth, screenHeight);
+            
+            glfwSetWindowSizeCallback(_window, WindowResize);
+            
             return true;
+        }
+        
+        void WindowResize(GLFWwindow *_window, int _width, int _height) {
+            glViewport(0, 0, _width, _height);
         }
     }
 }
