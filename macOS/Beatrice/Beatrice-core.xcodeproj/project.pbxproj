@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA9ED7571F69BBCD00AAA6F7 /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9ED7551F69BBCD00AAA6F7 /* window.cpp */; };
 		BAC6ED9E1F69900400FA9FE7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC6ED9D1F69900400FA9FE7 /* main.cpp */; };
 		BAC6EDA61F6994E200FA9FE7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC6EDA51F6994E200FA9FE7 /* OpenGL.framework */; };
 		BAC6EDA81F69955000FA9FE7 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC6EDA71F69955000FA9FE7 /* libGLEW.2.1.0.dylib */; };
@@ -26,7 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BAC6ED9A1F69900400FA9FE7 /* Beatrice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Beatrice; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9ED7551F69BBCD00AAA6F7 /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
+		BA9ED7561F69BBCD00AAA6F7 /* window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = window.hpp; sourceTree = "<group>"; };
+		BAC6ED9A1F69900400FA9FE7 /* Beatrice-core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Beatrice-core"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC6ED9D1F69900400FA9FE7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BAC6EDA51F6994E200FA9FE7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		BAC6EDA71F69955000FA9FE7 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
@@ -47,10 +50,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA9ED7531F69BB9300AAA6F7 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				BA9ED7551F69BBCD00AAA6F7 /* window.cpp */,
+				BA9ED7561F69BBCD00AAA6F7 /* window.hpp */,
+			);
+			name = graphics;
+			sourceTree = "<group>";
+		};
+		BA9ED7581F69C1A900AAA6F7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BAC6ED9D1F69900400FA9FE7 /* main.cpp */,
+				BA9ED7531F69BB9300AAA6F7 /* graphics */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		BAC6ED911F69900400FA9FE7 = {
 			isa = PBXGroup;
 			children = (
-				BAC6ED9C1F69900400FA9FE7 /* Beatrice */,
+				BAC6ED9C1F69900400FA9FE7 /* Beatrice-core */,
 				BAC6ED9B1F69900400FA9FE7 /* Products */,
 				BAC6EDA41F6994E200FA9FE7 /* Frameworks */,
 			);
@@ -59,17 +80,17 @@
 		BAC6ED9B1F69900400FA9FE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BAC6ED9A1F69900400FA9FE7 /* Beatrice */,
+				BAC6ED9A1F69900400FA9FE7 /* Beatrice-core */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BAC6ED9C1F69900400FA9FE7 /* Beatrice */ = {
+		BAC6ED9C1F69900400FA9FE7 /* Beatrice-core */ = {
 			isa = PBXGroup;
 			children = (
-				BAC6ED9D1F69900400FA9FE7 /* main.cpp */,
+				BA9ED7581F69C1A900AAA6F7 /* src */,
 			);
-			path = Beatrice;
+			path = "Beatrice-core";
 			sourceTree = "<group>";
 		};
 		BAC6EDA41F6994E200FA9FE7 /* Frameworks */ = {
@@ -85,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BAC6ED991F69900400FA9FE7 /* Beatrice */ = {
+		BAC6ED991F69900400FA9FE7 /* Beatrice-core */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAC6EDA11F69900400FA9FE7 /* Build configuration list for PBXNativeTarget "Beatrice" */;
+			buildConfigurationList = BAC6EDA11F69900400FA9FE7 /* Build configuration list for PBXNativeTarget "Beatrice-core" */;
 			buildPhases = (
 				BAC6ED961F69900400FA9FE7 /* Sources */,
 				BAC6ED971F69900400FA9FE7 /* Frameworks */,
@@ -97,9 +118,9 @@
 			);
 			dependencies = (
 			);
-			name = Beatrice;
+			name = "Beatrice-core";
 			productName = Beatrice;
-			productReference = BAC6ED9A1F69900400FA9FE7 /* Beatrice */;
+			productReference = BAC6ED9A1F69900400FA9FE7 /* Beatrice-core */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BAC6ED951F69900400FA9FE7 /* Build configuration list for PBXProject "Beatrice" */;
+			buildConfigurationList = BAC6ED951F69900400FA9FE7 /* Build configuration list for PBXProject "Beatrice-core" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -129,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BAC6ED991F69900400FA9FE7 /* Beatrice */,
+				BAC6ED991F69900400FA9FE7 /* Beatrice-core */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC6ED9E1F69900400FA9FE7 /* main.cpp in Sources */,
+				BA9ED7571F69BBCD00AAA6F7 /* window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glew/2.1.0/lib,
@@ -264,7 +287,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BAC6ED951F69900400FA9FE7 /* Build configuration list for PBXProject "Beatrice" */ = {
+		BAC6ED951F69900400FA9FE7 /* Build configuration list for PBXProject "Beatrice-core" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BAC6ED9F1F69900400FA9FE7 /* Debug */,
@@ -273,13 +296,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAC6EDA11F69900400FA9FE7 /* Build configuration list for PBXNativeTarget "Beatrice" */ = {
+		BAC6EDA11F69900400FA9FE7 /* Build configuration list for PBXNativeTarget "Beatrice-core" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BAC6EDA21F69900400FA9FE7 /* Debug */,
 				BAC6EDA31F69900400FA9FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

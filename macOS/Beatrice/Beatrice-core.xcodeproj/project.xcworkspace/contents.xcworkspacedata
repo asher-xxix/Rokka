@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Beatrice.xcodeproj">
+      location = "self:/Users/lynn/Documents/paras/vanilla/Rokka/macOS/Beatrice/Beatrice-core.xcodeproj">
    </FileRef>
 </Workspace>
