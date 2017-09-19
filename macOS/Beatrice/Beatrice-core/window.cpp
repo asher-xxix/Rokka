@@ -13,11 +13,27 @@
 namespace Beatrice {
     namespace graphics {
         
+        bool Window::_keys[MAX_KEYS];
+        bool Window::_buttons[MAX_BUTTONS];
+        double Window::_mouseX;
+        double Window::_mouseY;
+        
+        void WindowResize(GLFWwindow *_window, int _width, int _height);
+        void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+        
+        
         Window::Window(const char *title, int width, int height) {
             _title = title;
             _width = width;
             _height = height;
             if (!Init()) glfwTerminate();
+            
+            for (int i = 0; i < MAX_KEYS; ++i) {
+                _keys[i] = false;
+            }
+            for (int i = 0; i < MAX_BUTTONS; ++i) {
+                _buttons[i] = false;
+            }
         }
             
         Window::~Window() {
@@ -39,6 +55,14 @@ namespace Beatrice {
         
         void Window::Clear() const {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        }
+        
+        bool Window::IsKeyPressed(unsigned int keycode) {
+            if (keycode >= MAX_KEYS) {
+                
+                return false;
+            }
+            return _keys[keycode];
         }
         
         bool Window::Init() {
@@ -67,15 +91,23 @@ namespace Beatrice {
             
             
             glfwMakeContextCurrent(_window);
+            glfwSetWindowUserPointer(_window, this);
             // glewExperimental = GL_TRUE;     // allows newer opengl features to be used
             
             glfwSetWindowSizeCallback(_window, WindowResize);
-            
+            glfwSetKeyCallback(_window, KeyCallback);
             return true;
         }
         
+        
+        
         void WindowResize(GLFWwindow *_window, int _width, int _height) {
             glViewport(0, 0, _width, _height);
+        }
+        
+        void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+            Window *win = (Window *)glfwGetWindowUserPointer(window);
+            win->_keys[key] = (action != GLFW_RELEASE);
         }
     }
 }

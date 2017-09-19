@@ -25,6 +25,7 @@ int main(int argc, const char * argv[]) {
  
     while (!window.Closed()) {
         window.Clear();
+        if (window.IsKeyPressed(GLFW_KEY_A)) std::cout << "PRESSED A!\n";
         
         glBegin(GL_QUADS);
         glVertex2f(-0.5f, -0.5f);

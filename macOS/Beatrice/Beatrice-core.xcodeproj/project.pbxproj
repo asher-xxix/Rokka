@@ -50,6 +50,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA3EBADE1F707D9800308944 /* input */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = input;
+			sourceTree = "<group>";
+		};
 		BA9ED7531F69BB9300AAA6F7 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +69,7 @@
 		BA9ED7581F69C1A900AAA6F7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BA3EBADE1F707D9800308944 /* input */,
 				BAC6ED9D1F69900400FA9FE7 /* main.cpp */,
 				BA9ED7531F69BB9300AAA6F7 /* graphics */,
 			);
